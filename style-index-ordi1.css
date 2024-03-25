@@ -1,0 +1,277 @@
+/* Ordi1 */
+@media only screen and (min-width: 769px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle, #313131, #0f0f0f), url(noise1.svg);
+        background-blend-mode: multiply; /* pour combiner les deux arrière-plans */
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="black"/><mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20"><circle cx="10" cy="10" r="9" fill="white"/></mask><g mask="url(#mask0)"><rect x="-2" y="-2" width="24" height="24" fill="white"/></g></svg>'), auto;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        cursor: none;
+    }
+
+    /* curseur */
+    .cursor {
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: rgb(255, 255, 255);
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+        pointer-events: none;
+        z-index: 3;
+        transition: 0.05s, transform 0.2s ease-in-out;
+    }
+
+    .name:hover ~ .cursor {
+        transform: scale(3) translate(-15%, -15%);
+    }
+
+    /* description */
+    .description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 25vw;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-left: 20px;
+        z-index: 4;
+        color: rgb(184, 184, 184);
+    }
+
+        .description h1 {
+            margin-bottom: 10px;
+            font-family: "Carrois Gothic", sans-serif;
+            font-size: 1.4rem;
+        }
+
+        .description p {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Carrois Gothic", sans-serif;
+            font-size: 1rem;
+            text-align: justify;
+            text-align-last: left;
+        }
+
+    /* liens */
+    .liens {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 25vw;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-right: 20px;
+        z-index: 4;
+        color: rgb(184, 184, 184);
+    }
+
+        .liens h2 {
+            margin: 0;
+            font-family: "Carrois Gothic", sans-serif;
+            font-size: 1.4rem;
+        }
+
+    /* noms */
+    .name {
+        position: absolute;
+        font-family: "Brygada 1918", serif;
+        font-style: italic;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: white;
+        text-decoration: none;
+        cursor: none;
+        transition: scale 0.2s ease-in-out;
+        font-size: 1rem;
+    }
+
+        .name:hover {
+            scale: 1.1;
+        }
+
+        .name h1 {
+            font-weight: 100;
+        }
+
+    .pos1 {
+        top: 50%;
+        left: 50%;
+        animation: flottement1 15s ease-in-out infinite alternate;
+    }
+
+    .pos2 {
+        top: 70%;
+        left: 60%;
+        animation: flottement2 15s ease-in-out infinite alternate;
+    }
+
+    .pos3 {
+        top: 40%;
+        left: 30%;
+        animation: flottement3 15s ease-in-out infinite alternate;
+    }
+
+    .pos4 {
+        top: 35%;
+        left: 45%;
+        animation: flottement4 15s ease-in-out infinite alternate;
+    }
+
+    .pos5 {
+        top: 45%;
+        left: 65%;
+        animation: flottement1 15s ease-in-out infinite alternate;
+    }
+
+    .pos6 {
+        top: 30%;
+        left: 60%;
+        animation: flottement2 15s ease-in-out infinite alternate;
+    }
+
+    .pos7 {
+        top: 20%;
+        left: 35%;
+        animation: flottement3 15s ease-in-out infinite alternate;
+    }
+
+    .pos8 {
+        top: 65%;
+        left: 40%;
+        animation: flottement4 15s ease-in-out infinite alternate;
+    }
+
+    .pos9 {
+        top: 15%;
+        left: 55%;
+        animation: flottement1 15s ease-in-out infinite alternate;
+    }
+
+    .pos10 {
+        top: 25%;
+        left: 75%;
+        animation: flottement2 15s ease-in-out infinite alternate;
+    }
+
+    .pos11 {
+        top: 55%;
+        left: 75%;
+        animation: flottement3 15s ease-in-out infinite alternate;
+    }
+
+    .pos12 {
+        top: 55%;
+        left: 25%;
+        animation: flottement4 15s ease-in-out infinite alternate;
+    }
+
+    @keyframes flottement1 {
+        0% {
+            transform: translate(-50%, calc(-50% + -10px));
+        }
+
+        50% {
+            transform: translate(-50%, calc(-50% + 10px));
+        }
+
+        100% {
+            transform: translate(-50%, calc(-50% + -10px));
+        }
+    }
+
+    @keyframes flottement2 {
+        0% {
+            transform: translate(-50%, calc(-50% + 10px));
+        }
+
+        50% {
+            transform: translate(-50%, calc(-50% + -10px));
+        }
+
+        100% {
+            transform: translate(-50%, calc(-50% + 10px));
+        }
+    }
+
+    @keyframes flottement3 {
+        0% {
+            transform: translate(-50%, -50%);
+        }
+
+        25% {
+            transform: translate(-50%, calc(-50% + -10px));
+        }
+
+        75% {
+            transform: translate(-50%, calc(-50% + 10px));
+        }
+
+        100% {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @keyframes flottement4 {
+        0% {
+            transform: translate(-50%, -50%);
+        }
+
+        25% {
+            transform: translate(-50%, calc(-50% + 10px));
+        }
+
+        75% {
+            transform: translate(-50%, calc(-50% + -10px));
+        }
+
+        100% {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    /* image */
+    .fond {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+        .fond img {
+            filter: brightness(0.8);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+        }
+
+    .vignette {
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 20vh rgba(0,0,0,0.9) inset;
+        z-index: 3;
+    }
+}
+
+
+
