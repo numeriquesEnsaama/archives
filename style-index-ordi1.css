@@ -107,6 +107,12 @@
         .name h1 {
             font-weight: 100;
         }
+    .hidden-object{
+        overflow:hidden;
+        width:0;
+        height:0;
+        visibility: hidden;
+    }
 
     .pos1 {
         top: 50%;
