@@ -92,21 +92,22 @@ section {
     font-family: "Brygada 1918", serif;
     font-style: italic;
     font-size: 1.5rem;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     color: #292929;
 }
 
 /* fond grainy */
 .background {
-    background: url(noise2.svg);
-    background-color: white;
-    z-index:-1;
-    filter: brightness(1.15);
+    position: absolute;
+    z-index: -100;
     width: 100%;
     height: 100%;
-    position: absolute;
-    top:0;
-    left:0;
+    background: url(noise2.svg);
+    background-size: auto 100vh; /* Ajuste la taille du dégradé */
+    background-repeat: repeat; /* Répétition du fond si le contenu dépasse la hauteur */
+    box-sizing: border-box; /* Pour inclure le padding dans la hauteur du div */
+    background-blend-mode: multiply;
+    filter: brightness(1.3);
 }
 
 /* mobile */
