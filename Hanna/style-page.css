@@ -1,0 +1,153 @@
+﻿body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* flèche de navigation */
+.fleche-retour {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    width: 2.5vw;
+}
+    .fleche-retour img {
+        filter: invert(0.9);
+        width:100%;
+    }
+
+/* partie projet */
+section {
+    margin-top: 3vw;
+    background-color: white;
+    width: 70%;
+    min-height: 100vh;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+
+    align-content: start;
+}
+
+/* type d'item */
+.image {
+    margin: 0 0 5px 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+    .image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .video video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+.text {
+    font-family: "Carrois Gothic", sans-serif;
+    margin: 0;
+    color: #2E2E2E;
+}
+
+/* taille d'item */
+.full {
+    grid-column: span 12;
+}
+.demi {
+    grid-column: span 6;
+}
+.tier {
+    grid-column: span 4;
+}
+.deux-tier {
+    grid-column: span 8;
+}
+.quart {
+    grid-column: span 3;
+}
+
+/* titre */
+.titre {
+    margin: 0;
+    font-family: "Carrois Gothic", sans-serif;
+    font-size: 2.5rem;
+    color: #292929;
+}
+
+.nom {
+    margin: 0;
+    font-family: "Brygada 1918", serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 1vw;
+    color: #292929;
+}
+
+/* fond grainy */
+.background {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    background: url(noise2.svg);
+    background-size: auto 100vh; /* Ajuste la taille du dégradé */
+    background-repeat: repeat; /* Répétition du fond si le contenu dépasse la hauteur */
+    box-sizing: border-box; /* Pour inclure le padding dans la hauteur du div */
+    background-blend-mode: multiply;
+    filter: brightness(1.3);
+}
+
+/* mobile */
+@media only screen and (max-width: 768px){
+    section {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px 0 10px;
+    }
+
+    .titre {
+        text-align:center;
+    }
+
+    .nom {
+        text-align: center;
+    }
+
+    .fleche-retour {
+        visibility: hidden; 
+    }
+
+    /* taille d'item */
+    .full {
+        grid-column: span 12;
+    }
+
+    .demi {
+        grid-column: span 12;
+    }
+
+    .tier {
+        grid-column: span 12;
+    }
+
+    .deux-tier {
+        grid-column: span 12;
+    }
+
+    .quart {
+        grid-column: span 12;
+    }
+}
